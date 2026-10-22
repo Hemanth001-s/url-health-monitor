@@ -1,4 +1,14 @@
-# URL Health & Observability Platform
+# URL Health & Observability Platform  **Live demo:** https://url-health-monitor-3sdc.onrender.com
+**Source:** https://github.com/Hemanth001-s/url-health-monitor
+
+> **Note on the hosted demo:** it runs on a free hosting tier, which has two limits:
+> 1. **Ephemeral storage** – the SQLite database is reset whenever the service restarts or redeploys, so accounts and history
+>    do not persist. Sign up again and add the sample URLs (`sample-urls.json`) to try it.
+> 2. **Idle sleep** – the first request after a quiet period can take up to a minute while the service wakes up, and scheduled
+>    checks only run while it is awake.
+>
+> For production I would attach a persistent disk (the app already supports `DB_PATH` on a mounted volume) or move to managed
+> Postgres + Redis, as described in *Design decisions & trade-offs*.
 
 Full-stack monitor: sign up, add URLs (typed or JSON upload), run checks concurrently or on a schedule,
 watch live status, response-time charts, uptime/failure metrics, with structured logging throughout.
