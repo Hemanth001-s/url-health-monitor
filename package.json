@@ -1,0 +1,13 @@
+{
+  "name": "url-health-monitor",
+  "version": "1.0.0",
+  "description": "URL Health & Observability Platform - zero-dependency Node.js implementation",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "dev": "LOG_LEVEL=debug node --disable-warning=ExperimentalWarning --watch src/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "engines": { "node": ">=22.5" },
+  "license": "MIT"
+}

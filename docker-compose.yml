@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET}   # openssl rand -hex 32
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      WORKER_CONCURRENCY: 20
+    volumes: ["monitor-data:/data"]
+    restart: unless-stopped
+volumes:
+  monitor-data:
