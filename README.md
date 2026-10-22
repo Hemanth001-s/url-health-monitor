@@ -91,7 +91,7 @@ scheduling, RBAC, SSE, rate limiting/CSRF, and log correlation.
 *(Edit this to reflect your own process before submitting.)* I used Claude to turn the brief into a requirement checklist, propose the
 architecture and alternatives, write the first implementation and tests, and review security (SSRF, CSRF, timing attacks).
 I then ran the tests, drove the UI in a headless browser, found and fixed issues (e.g. a UI race where fast checks finished before the
-"queued" state was recorded), and I can explain and defend each design decision.
+"queued" state was recorded), and I can explain and defend each design decision, as i used a  database  from render which is free of cost the data processing starts again after sleep  .
 
 ## Deploying publicly
 Needs: an always-on host (the scheduler runs inside the process), **a persistent disk/volume** for `DB_PATH`, and HTTPS.
